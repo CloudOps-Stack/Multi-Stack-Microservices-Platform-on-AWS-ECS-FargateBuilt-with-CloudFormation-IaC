@@ -25,12 +25,12 @@ The platform is split into 7 CloudFormation stacks. Each stack has a specific re
 
 | # | Stack | File | Purpose |
 |---|-------|------|---------|
-| 1 | VPC | `vpc-new.yaml` | Network foundation — subnets, routing, security |
+| 1 | VPC | `vpc.yaml` | Network foundation — subnets, routing, security |
 | 2 | ALB | `alb.yaml` | Load balancer — receives internet traffic |
 | 3 | ECR | `ecr.yaml` | Container image registry |
 | 4 | ECS | `ecs.yaml` | Runs your containers on Fargate |
 | 5 | RDS | `rds.yaml` | Managed relational database |
-| 6 | Other ECS | `other-ecs-new.yaml` | Add-on services on the same cluster |
+| 6 | Other ECS | `other-ecs.yaml` | Add-on services on the same cluster |
 | 7 | Pipeline | `Pipeline.yaml` | CI/CD — build, scan, deploy automatically |
 
 > Deploy in the order listed above. Each stack depends on the one before it.
